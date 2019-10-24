@@ -134,6 +134,10 @@ public class Controller {
             labelDisplayInstructions.setText("Choose marker first");
 
         }
+
+        if(turn > 9) {
+            buttonPlayAgain.setVisible(true);
+        }
     }
 
     @FXML
@@ -168,6 +172,7 @@ public class Controller {
         playField = new PlayArea();
         isWinner = false;
         buttonPlayAgain.setVisible(false);
+        turn = 1;
     }
 }
 
