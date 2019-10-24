@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<?import javafx.scene.control.Button?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <left>
+      <VBox fx:id="vboxLeftPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label text="Player 1">
+                     <font>
+                        <Font name="System Bold Italic" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="player1Score" alignment="CENTER" contentDisplay="CENTER" maxHeight="60.0" maxWidth="160.0" minHeight="60.0" minWidth="160.0" prefHeight="60.0" prefWidth="160.0">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox prefHeight="100.0" prefWidth="100.0" />
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label text="Player 2">
+                     <font>
+                        <Font name="System Bold Italic" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="player2Score" alignment="CENTER" contentDisplay="CENTER" maxHeight="60.0" maxWidth="160.0" minHeight="60.0" minWidth="160.0" prefHeight="60.0" prefWidth="160.0">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </left>
+   <right>
+      <VBox fx:id="vboxRightPane" alignment="CENTER" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" prefHeight="100.0" prefWidth="100.0">
+               <children>
+                  <Label fx:id="labelDisplayInstructions" prefHeight="107.0" prefWidth="202.0" text="Player choose your mark" alignment="CENTER">
+                     <font>
+                        <Font name="System Bold Italic" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox fx:id="chooseMarkTop" maxHeight="150.0" maxWidth="150.0" minHeight="150.0" minWidth="150.0" onMouseClicked="#chooseMarker" prefHeight="150.0" prefWidth="150.0" />
+            <VBox fx:id="chooseMarkBot" maxHeight="150.0" maxWidth="150.0" minHeight="150.0" minWidth="150.0" onMouseClicked="#chooseMarker" prefHeight="150.0" prefWidth="150.0" />
+         </children>
+      </VBox>
+   </right>
+   <top>
+      <HBox fx:id="vboxTopPane" alignment="BOTTOM_CENTER" prefHeight="150.0" prefWidth="1280.0" BorderPane.alignment="CENTER_LEFT">
+         <children>
+            <Label alignment="CENTER" text="Tic-Tac-Toe">
+               <font>
+                  <Font name="System Bold" size="35.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </top>
+   <bottom>
+      <HBox fx:id="hboxBottompane" prefHeight="150.0" prefWidth="1280.0" BorderPane.alignment="CENTER" alignment="CENTER">
+         <children>
+            <Button fx:id="buttonPlayAgain" text="Play again" visible="false" onAction="#resetAll" alignment="CENTER"></Button>
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <VBox fx:id="vboxCenterPane" maxHeight="450.0" maxWidth="450.0" minHeight="450.0" minWidth="450.0" prefHeight="450.0" prefWidth="450.0" style="-fx-border-color: grey; -fx-background-color: white; -fx-border-width: 5;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="150.0" prefWidth="450.0">
+               <children>
+                  <VBox fx:id="cell7" onMouseClicked="#placeMarker" prefHeight="150.0" prefWidth="150.0" style="-fx-border-color: grey; -fx-background-image: null; -fx-border-width: 2.5;" />
+                  <VBox fx:id="cell8" onMouseClicked="#placeMarker" prefHeight="150.0" prefWidth="150.0" style="-fx-border-color: grey; -fx-background-image: null; -fx-border-width: 2.5;" />
+                  <VBox fx:id="cell9" onMouseClicked="#placeMarker" prefHeight="150.0" prefWidth="150.0" style="-fx-border-color: grey; -fx-background-image: null; -fx-border-width: 2.5;" />
+               </children>
+            </HBox>
+            <HBox prefHeight="150.0" prefWidth="450.0">
+               <children>
+                  <VBox fx:id="cell4" onMouseClicked="#placeMarker" prefHeight="150.0" prefWidth="150.0" style="-fx-border-color: grey; -fx-background-image: null; -fx-border-width: 2.5;" />
+                  <VBox fx:id="cell5" onMouseClicked="#placeMarker" prefHeight="150.0" prefWidth="150.0" style="-fx-border-color: grey; -fx-background-image: null; -fx-border-width: 2.5;" />
+                  <VBox fx:id="cell6" onMouseClicked="#placeMarker" prefHeight="150.0" prefWidth="150.0" style="-fx-border-color: grey; -fx-background-image: null; -fx-border-width: 2.5;" />
+               </children>
+            </HBox>
+            <HBox prefHeight="150.0" prefWidth="450.0">
+               <children>
+                  <VBox fx:id="cell1" onMouseClicked="#placeMarker" prefHeight="150.0" prefWidth="150.0" style="-fx-border-color: grey; -fx-background-image: null; -fx-border-width: 2.5;" />
+                  <VBox fx:id="cell2" onMouseClicked="#placeMarker" prefHeight="150.0" prefWidth="150.0" style="-fx-border-color: grey; -fx-background-image: null; -fx-border-width: 2.5;" />
+                  <VBox fx:id="cell3" onMouseClicked="#placeMarker" prefHeight="150.0" prefWidth="150.0" style="-fx-border-color: grey; -fx-background-image: null; -fx-border-width: 2.5;" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
